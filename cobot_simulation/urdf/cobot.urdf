@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<robot name="cobot">
+
+    <link name="base_link">
+
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.05"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.1" length="0.05"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+        </collision>
+        
+    </link>
+
+    <link name="link1">
+        
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.264"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.132" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.264"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.132" rpy="0.0 0.0 0.0"/>
+        </collision>
+
+    </link>
+
+    <joint name="base_link__link1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    </joint>
+
+    <link name="link2">
+        
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.850"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.425" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.850"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.425" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <joint name="link1__link2" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-2.5" upper="2.5" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0.1 0.214" rpy="0 0 0"/>
+    </joint>
+
+    <link name="link3">
+        
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.680"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.340" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.680"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.340" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <joint name="link2__link3" type="revolute">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14" upper="3.14" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 -0.1 0.8" rpy="0 0 0"/>
+    </joint>
+
+    <link name="link4">
+        
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.130"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.065" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.130"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.065" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+
+    <joint name="link3__link4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14" upper="3.14" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0.1 0.630" rpy="0 0 0"/>
+    </joint>
+
+    
+
+</robot>
