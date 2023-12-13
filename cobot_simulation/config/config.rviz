@@ -67,8 +67,122 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
           Value: true
-        link1:
+        l_ankle_lateral_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_ankle_swing_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_foot_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_hand_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_hip_lateral_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_hip_twist_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_lower_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_lower_leg_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_shoulder_swing_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_upper_leg_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_ankle_lateral_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_ankle_swing_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_foot_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_hand_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_hip_lateral_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_hip_twist_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_lower_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_lower_leg_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_shoulder_swing_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_upper_leg_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        torso_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -88,18 +202,91 @@ Visualization Manager:
         All Enabled: true
         base_link:
           Value: true
-        link1:
+        imu_link:
+          Value: true
+        l_ankle_lateral_link:
+          Value: true
+        l_ankle_swing_link:
+          Value: true
+        l_foot_link:
+          Value: true
+        l_hand_link:
+          Value: true
+        l_hip_lateral_link:
+          Value: true
+        l_hip_twist_link:
+          Value: true
+        l_lower_arm_link:
+          Value: true
+        l_lower_leg_link:
+          Value: true
+        l_shoulder_swing_link:
+          Value: true
+        l_upper_arm_link:
+          Value: true
+        l_upper_leg_link:
+          Value: true
+        r_ankle_lateral_link:
+          Value: true
+        r_ankle_swing_link:
+          Value: true
+        r_foot_link:
+          Value: true
+        r_hand_link:
+          Value: true
+        r_hip_lateral_link:
+          Value: true
+        r_hip_twist_link:
+          Value: true
+        r_lower_arm_link:
+          Value: true
+        r_lower_leg_link:
+          Value: true
+        r_shoulder_swing_link:
+          Value: true
+        r_upper_arm_link:
+          Value: true
+        r_upper_leg_link:
+          Value: true
+        torso_link:
           Value: true
       Marker Alpha: 0.5
-      Marker Scale: 0.30000001192092896
+      Marker Scale: 0
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
         base_link:
-          link1:
+          imu_link:
             {}
+          torso_link:
+            l_hip_twist_link:
+              l_hip_lateral_link:
+                l_upper_leg_link:
+                  l_lower_leg_link:
+                    l_ankle_swing_link:
+                      l_ankle_lateral_link:
+                        l_foot_link:
+                          {}
+            l_shoulder_swing_link:
+              l_upper_arm_link:
+                l_lower_arm_link:
+                  l_hand_link:
+                    {}
+            r_hip_twist_link:
+              r_hip_lateral_link:
+                r_upper_leg_link:
+                  r_lower_leg_link:
+                    r_ankle_swing_link:
+                      r_ankle_lateral_link:
+                        r_foot_link:
+                          {}
+            r_shoulder_swing_link:
+              r_upper_arm_link:
+                r_lower_arm_link:
+                  r_hand_link:
+                    {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -130,7 +317,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.1381654739379883
+      Distance: 2.6286821365356445
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -138,17 +325,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.022814905270934105
+        Y: -0.7317334413528442
+        Z: 0.7677391171455383
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7353980541229248
+      Pitch: -0.6596018075942993
       Target Frame: <Fixed Frame>
-      Yaw: 1.2803980112075806
+      Yaw: 1.120397686958313
     Saved: ~
 Window Geometry:
   Displays:
@@ -167,4 +354,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 315
-  Y: 197
+  Y: 123
